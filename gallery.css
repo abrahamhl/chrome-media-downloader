@@ -1,0 +1,9 @@
+body { font-family: Arial; background: #121212; color: white; padding: 20px; }
+.header { display: flex; justify-content: space-between; margin-bottom: 20px; align-items: center; }
+button { background: #e74c3c; color: white; padding: 10px 20px; border: none; cursor:pointer; border-radius: 5px; font-weight: bold;}
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.card { position: relative; height: 350px; border-radius: 8px; overflow: hidden; background: #222; }
+.card img { width: 100%; height: 100%; object-fit: cover; }
+.overlay { position: absolute; bottom: 0; background: rgba(0,0,0,0.9); width: 100%; height: 100%; transform: translateY(100%); transition: transform 0.3s ease; padding: 15px; box-sizing: border-box; overflow-y: auto;}
+.card:hover .overlay { transform: translateY(0); }
+.prompt { color: #f1c40f; font-size: 15px; margin-bottom: 10px; line-height: 1.4; }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visual Library PRO</title>
+    <style>
+        body { font-family: 'Segoe UI', system-ui, sans-serif; width: 340px; margin: 0; background: #ffffff; color: #333; }
+        .header { padding: 15px; background: #f8f9fa; border-bottom: 1px solid #eee; }
+        .header h1 { font-size: 16px; margin: 0; color: #2d3436; font-weight: bold; }
+        .container { padding: 15px; }
+        .section-title { font-size: 12px; font-weight: bold; color: #636e72; text-transform: uppercase; margin-bottom: 10px; }
+
+        .macro-display { background: #2d3436; border-radius: 6px; padding: 12px; text-align: center; font-size: 14px; font-weight: bold; color: #00b894; margin-bottom: 15px; }
+
+        .record-box { background: #f1f2f6; border: 2px dashed #b2bec3; border-radius: 8px; padding: 20px 10px; text-align: center; cursor: pointer; font-size: 13px; color: #636e72; margin-bottom: 15px; transition: 0.2s; }
+        .record-box:hover { border-color: #0984e3; background: #e3f2fd; }
+        .record-box.recording { border-color: #e74c3c; background: #fadbd8; color: #c0392b; animation: pulse 1.5s infinite; }
+
+        .action-btns { display: flex; gap: 10px; }
+        .btn-record { flex: 1; background: #3498db; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .btn-save { flex: 1; background: #e74c3c; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .btn-record:hover { background: #2980b9; }
+        .btn-save:hover { background: #c0392b; }
+
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+    <div class="header"><h1>⭐ Visual Library PRO</h1></div>
+    <div class="container">
+
+        <div class="section-title">Combinación Actual</div>
+        <div id="macroDisplay" class="macro-display">Cargando...</div>
+
+        <div id="recordBox" class="record-box" tabindex="0">
+            Haz clic en "Iniciar Grabación" y luego pulsa tu combinación aquí dentro (ej: Shift + Clic Derecho).
+        </div>
+
+        <div class="action-btns">
+            <button id="btnRecord" class="btn-record">Empezar a Grabar</button>
+            <button id="btnSave" class="btn-save">Guardar</button>
+        </div>
+
+        <button id="openGallery" style="width: 100%; margin-top: 15px; background: #2ecc71; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold;">Abrir Mi Galería</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

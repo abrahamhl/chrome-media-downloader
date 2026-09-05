@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Visual Library PRO",
+  "version": "3.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Visual Library PRO",
+    "default_popup": "popup.html"
+  }
+}

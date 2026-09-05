@@ -32,10 +32,6 @@ Run the tests using:
 ```bash
 pnpm test
 ```
-To run the linter:
-```bash
-pnpm run lint
-```
 
 ## KEY TECHNICAL DECISIONS
 - **Vanilla JavaScript:** Chosen for zero-dependency runtime execution in the browser to ensure the smallest possible footprint and strict security.
@@ -44,7 +40,7 @@ pnpm run lint
 
 ## VERIFICATION
 - Functional testing of core logic is done via `node:test`.
-- Linting and formatting via `eslint` and `prettier` ensure code quality.
+
 - Automated CI pipeline runs on GitHub Actions.
 
 ## HONEST LIMITATIONS

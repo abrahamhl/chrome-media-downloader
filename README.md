@@ -40,7 +40,7 @@ pnpm run lint
 ## KEY TECHNICAL DECISIONS
 - **Vanilla JavaScript:** Chosen for zero-dependency runtime execution in the browser to ensure the smallest possible footprint and strict security.
 - **Minimal Permissions:** `<all_urls>` is necessary for the core functionality (downloading media from any site the user visits), but other permissions are strictly limited to necessary APIs (`activeTab`, `scripting`, `downloads`, `storage`, `contextMenus`).
-- **Strict CSP:** A strict Content Security Policy (`script-src 'self'; object-src 'self';`) is enforced via the manifest to prevent XSS.
+- **Strict CSP:** A strict Content Security Policy (`script-src 'self'; object-src 'self';`) is enforced via the manifest to restrict extension-page script sources and reduce script-injection risk.
 
 ## VERIFICATION
 - Functional testing of core logic is done via `node:test`.

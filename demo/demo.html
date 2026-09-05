@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Media Downloader - Demo</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .grid { display: flex; gap: 20px; flex-wrap: wrap; }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
+            position: relative;
+        }
+        .card img { width: 100%; border-radius: 4px; }
+        .promptHover {
+            display: none;
+            position: absolute;
+            bottom: 10px; left: 10px; right: 10px;
+            background: rgba(0,0,0,0.7); color: white;
+            padding: 5px; font-size: 12px;
+        }
+        .card:hover .promptHover { display: block; }
+    </style>
+</head>
+<body>
+    <h1>Chrome Media Downloader Demo Page</h1>
+    <p>Use Shift + Left Click or right-click to test the extension.</p>
+
+    <h2>Structured Cards (with .promptHover metadata)</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Demo+Image+1" alt="Demo Image 1">
+            <div class="promptHover">A beautiful sunset over the digital ocean</div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Demo+Image+2" alt="Demo Image 2">
+            <div class="promptHover">Cyberpunk city street neon lights</div>
+        </div>
+    </div>
+
+    <h2>Standalone Media</h2>
+    <div class="grid">
+        <img src="https://via.placeholder.com/150?text=Standalone+1" alt="Standalone">
+        <img src="https://via.placeholder.com/150?text=Standalone+2" alt="Standalone">
+    </div>
+</body>
+</html>

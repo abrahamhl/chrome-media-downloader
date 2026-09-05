@@ -1,3 +1,5 @@
+import { cleanTitle } from './utils.js';
+
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: "download_gallery_pro",
@@ -16,14 +18,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     }
 });
 
-function cleanTitle(prompt) {
-    if (!prompt || prompt.includes("Sin prompt")) return `Img_${Date.now()}`;
-    let words = prompt.replace(/[^a-zA-Z0-9 ]/g, '').trim().split(' ');
-    let shortName = words.slice(0, 5).join('-');
-    return `${shortName}_${Math.floor(Math.random() * 1000)}`;
-}
-
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((msg, _sender, _sendResponse) => {
     if (msg.action === "save_media" && msg.url) {
         let filename = `MiGaleria/${cleanTitle(msg.prompt)}.png`;
 

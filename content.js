@@ -63,7 +63,7 @@ document.addEventListener('contextmenu', (e) => {
 }, true);
 
 // Escuchar orden manual desde el menú del navegador
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request, _sender, _sendResponse) => {
     if (request.action === "context_download" && lastContextTarget) {
         let cardWrapper = lastContextTarget.closest('.card');
         extractDataAndSend(cardWrapper, lastContextTarget);

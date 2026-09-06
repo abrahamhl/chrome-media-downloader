@@ -20,7 +20,7 @@ A synthetic demo page is available in `demo/demo.html`.
 ## HOW TO RUN
 1. Clone this repository.
 2. Ensure you have `pnpm` installed (`corepack enable pnpm`).
-3. Run `pnpm install` to install developer dependencies.
+3. Run `pnpm install` if you wish to run local tests (this project requires zero dependencies for its core extension runtime).
 4. Open Google Chrome and navigate to `chrome://extensions/`.
 5. Enable **Developer mode** in the top right.
 6. Click **Load unpacked** and select the directory containing this repository.
